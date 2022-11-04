@@ -1,11 +1,10 @@
-from PIL import Image
 import pandas as pd
 import matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
 import streamlit as st
-
+import sys
 
 
 st.title("Loan Prediction Based on Customer Behavior")
@@ -49,7 +48,7 @@ if Profession_filter!='ALL':
 
 
 # data set description
-image1 = Image.open("微信图片_20221028205848.jpg")
+image1 = plt.imread("微信图片_20221028205848.jpg")
 st.image(image1,use_column_width=True)
 st.subheader("·Introduction of Research")
 st.write("An organization wants to predict who possible defaulters are for the consumer loans product. They have data about historic customer behavior based on what they have observed. Hence when they acquire new customers they want to predict who is riskier and who is not.")
@@ -84,7 +83,7 @@ st.write("The research covers groups with the yearly income < $10,000,000.")
 st.markdown("**Content**")
 st.write("All values were provided at the time of the loan application.")
 st.markdown("***Attributes Description:***")
-image = Image.open("微信图片_20221028205907.jpg")
+image = plt.imread("微信图片_20221028205907.jpg")
 st.image(image,width=600,caption = "Attributes of Samples",use_column_width=True)
 
 
@@ -192,7 +191,7 @@ st.write(f"The figure (Fig7) shows that the default rate is the lowest in 60-70 
 
 st.subheader("·Further study")
 st.subheader('Fig8: Importance Ranking of Features')
-image3 = Image.open("e912c02d147696b840bcba3158c4a8f.png")
+image3 = plt.imread("e912c02d147696b840bcba3158c4a8f.png")
 st.image(image3,use_column_width=True)
 st.markdown("**Data Description**")
 st.write(f"We use the random forest algorithm to rank the importance of some features, and it is found that the importance of these features on the impact of loan default results is ranked as follows:1.Income 2.Age 3.Experience 4.Current_job_years 5.Current_house_years")
