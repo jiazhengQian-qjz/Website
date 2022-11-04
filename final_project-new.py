@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
 import streamlit as st
-import sys
 
 
 st.title("Loan Prediction Based on Customer Behavior")
